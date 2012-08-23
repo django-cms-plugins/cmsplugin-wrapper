@@ -1,8 +1,8 @@
-=============
-django-packit
-=============
+=================
+cmsplugin-wrapper
+=================
 
-Generic app to calculate packages fitting into bin(s) 
+A plugin to wrap other plugins in django-cms
 
 Installation
 ------------
@@ -11,13 +11,15 @@ For the current stable version:
 
 ::
 
-    pip install django-packit
+    pip install cmsplugin-wrapper
+
 
 For the development version:
 
 ::
 
-    pip install -e git+git://github.com/fivethreeo/django-packit.git#egg=django-packit
+    pip install -e git+git://github.com/fivethreeo/cmsplugin-wrapper.git#egg=cmsplugin-wrapper
+
 
 Config:
 
@@ -25,6 +27,19 @@ Config:
 
         INSTALLED_APPS = [
             ...
-            'packit',
+            'cmsplugin_wrapper',
             ...
         ],
+        
+        CMS_PLUGIN_PROCESSORS = (
+            ...
+            'cmsplugin_wrapper.plugin_processors.wrap_plugin',
+            ...
+        )
+        
+        
+        CONTEXT_PROCESSORS = (
+            ...
+            'cmsplugin_wrapper.context_processors.cmsplugin_wrapper',
+            ...
+        )

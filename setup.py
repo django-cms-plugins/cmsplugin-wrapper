@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-import packit
+import cmsplugin_wrapper
 
 CLASSIFIERS = [
         'Development Status :: 4 - Beta',
@@ -14,13 +14,13 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name='django-packit',
-    version=packit.get_version(),
-    description='Generic app to calculate packages fitting into bin(s) ',
+    name='cmsplugin-wrapper',
+    version=cmsplugin_wrapper.get_version(),
+    description='A plugin to wrap other plugins in django-cms',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
     author='Oyvind Saltvik',
     author_email='oyvind.saltvik@gmail.com',
-    url='http://github.com/fivethreeo/django-packit/',
+    url='http://github.com/fivethreeo/cmsplugin-wrapper/',
     packages=find_packages(),
     classifiers=CLASSIFIERS,
     include_package_data=True,
