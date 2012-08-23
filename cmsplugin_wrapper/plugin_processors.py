@@ -31,4 +31,5 @@ def wrap_plugin(instance, placeholder, rendered_content, original_context):
             wrap_holder['index'].pop()
             wrap_holder['at_index'] = wrap_holder['at_index'] == 0 and None or wrap_holder['at_index'] - 1
             
-            template.render(context)
+            return template.render(context)
+    return u''
