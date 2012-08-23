@@ -24,10 +24,10 @@ def wrap_plugin(instance, placeholder, rendered_content, original_context):
         if wrap_info['plugin_counter'] == wrap_info['wrapper_plugin'].number or \
             wrap_info['plugin_counter'] == instance._render_meta.instance._render_meta.total:
              
-        template = Template(wrap_info['wrapper_plugin'])
-        context = wrap_info['context']
-        context['plugins'] = wrap_info['plugins']
-        wrap_holder['index'].pop()
-        wrap_holder['at_index'] = wrap_holder['at_index'] == 0 and None or wrap_holder['at_index'] - 1
-        
-        template.render(context)
+            template = Template(wrap_info['wrapper_plugin'])
+            context = wrap_info['context']
+            context['plugins'] = wrap_info['plugins']
+            wrap_holder['index'].pop()
+            wrap_holder['at_index'] = wrap_holder['at_index'] == 0 and None or wrap_holder['at_index'] - 1
+            
+            template.render(context)
