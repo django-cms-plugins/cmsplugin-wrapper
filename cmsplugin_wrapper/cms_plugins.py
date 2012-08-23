@@ -8,7 +8,7 @@ class CMSWrapperPlugin(CMSPluginBase):
     model = WrapperPlugin
     name = _("WrapperPlugin")
     admin_preview = False
-    render_template = 'cms/dummy.html'
+    render_template = 'cmsplugin_wrapper/dummy.html'
     
     def render(self, context, instance, placeholder):
         return context
