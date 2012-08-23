@@ -17,7 +17,7 @@ def wrap_plugin(instance, placeholder, rendered_content, original_context):
         wrap_holder['at_index'] = wrap_holder['at_index'] and wrap_holder['at_index'] + 1 or 0
         wrap_holder['index'].append(wrap_info)
         
-    elif wrap_holder['at_index'] and not (instance._render_meta.text_enabled and instance.parent):
+    elif wrap_holder['at_index'] is not None and not (instance._render_meta.text_enabled and instance.parent):
         wrap_info = wrap_holder['index'][wrap_holder.at_index]
         wrap_info['plugin_counter'] = wrap_info['plugin_counter'] + 1
         wrap_info['plugins'].append((instance, rendered_content))
