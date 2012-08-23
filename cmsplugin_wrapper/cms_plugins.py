@@ -7,7 +7,6 @@ from cmsplugin_wrapper.models import WrapperPlugin
 class CMSWrapperPlugin(CMSPluginBase):
     model = WrapperPlugin
     name = _("WrapperPlugin")
-    render_plugin = False
     admin_preview = False
     template = 'cms/dummy.html'
     
