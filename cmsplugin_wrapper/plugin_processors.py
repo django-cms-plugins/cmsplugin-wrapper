@@ -24,7 +24,7 @@ def wrap_plugin(instance, placeholder, rendered_content, original_context):
         wrap_info['plugins'].append((instance, rendered_content))
          
         if wrap_info['plugin_counter'] == wrap_info['wrapper_plugin'].number or \
-            wrap_info['plugin_counter'] == instance._render_meta.instance._render_meta.total:
+            wrap_info['plugin_counter'] == instance._render_meta.total:
              
             template = Template(wrap_info['wrapper_plugin'].template)
             context = wrap_info['context']
