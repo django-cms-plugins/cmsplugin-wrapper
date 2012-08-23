@@ -9,5 +9,8 @@ class CMSWrapperPlugin(CMSPluginBase):
     name = _("WrapperPlugin")
     render_plugin=False
     admin_preview = False
-
+    
+    def render(self, context, instance, placeholder):
+        return context
+            
 plugin_pool.register_plugin(CMSWrapperPlugin)
